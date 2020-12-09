@@ -12,8 +12,8 @@
     bottom: 5px;
     margin-top: 20%;
     left: 5px;
-    width:50%; /* set to 100% if space is available */
-    height: 270px;
+    width:70%; /* set to 100% if space is available */
+    height: 220px;
     z-index:70px;
     text-align:center;
     font-weight:normal;
@@ -72,17 +72,24 @@
       document.getElementById("jurus").innerHTML = rand;
       document.getElementById("gerakan").innerHTML = "Gerakan Ke - "+rand2;
     
-      $("#number").fadeIn("slow").delay(11000).fadeOut("slow", loop.bind(null, i+1));
-      var counter = 11;
-      var interval = setInterval(function() {
-          counter--;
+      $("#number").fadeIn("slow").delay(15000).fadeOut("slow", loop.bind(null, i+1));
+      document.getElementById("demo").innerHTML = "Taking a break...";
+      var counter = 13;
+      var interval = setInterval(function() {          
+          if (counter == 13) {
+            document.getElementById("demo").innerHTML = "Taking a break...";
+          } else if (counter <= 10) {
+            document.getElementById("demo").innerHTML =  counter+" detik";
+          }
           // Display 'counter' wherever you want to display it.
+          counter--;
           if (counter == 0) {              
               clearInterval(interval);
           }
-          document.getElementById("demo").innerHTML =  counter+" detik";
+          
       }, 1000);
     })(0); // Execute the loop function immediately with i = 0
+
 
   </script>
 
