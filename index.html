@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +10,13 @@
   
   #number {
     bottom: 5px;
+    margin-top: 20%;
     left: 5px;
     width:50%; /* set to 100% if space is available */
     height: 270px;
-    z-index:105;
+    z-index:70px;
     text-align:center;
     font-weight:normal;
-    font-size:28px;
     color:white;
     background-color: #5f5f5f;
     box-shadow:0 0 10px #222;
@@ -35,6 +34,20 @@
   h3 {
     color: coral;
   }
+
+  .footer-heart{text-align:center;font-family: open sans, sans-serif;}
+
+  .footer-heart a{border-bottom: 1px solid #453886;color: #453886;padding-bottom: .25em; text-decoration: none;}
+
+  .footer-heart a:hover{color:#2196f3; background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 20%;
+    border-bottom: 0;
+    padding-bottom: .3em;
+    text-decoration: none;}
+
+  .emoji{vertical-align: middle;}
 </style>
 <body>
   <div id="number"  style="display: display;">
@@ -42,12 +55,13 @@
     <h3 id="gerakan"></h3>
     <p id="demo"></p>
   </div>
-  
+  <footer>
+    <p class="footer-heart">
+      Made with <g-emoji class="g-emoji" alias="heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
+    <img class="emoji" alt="heart" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"></g-emoji> by <a href="#">Victory Taekwondo Club</a>
+    </p>
+  </footer>
   <script>
-
-    
-    
-
     var myArray = ['Il Jang Taeguk (1)', 'Ee Jang Taeguk (2)', 'Sam Jang Taeguk (3)', 'Sa Jang Taeguk (4)', 'Oh Jang Taeguk (5)', 'Yook Jang Taeguk (6)', 'Chil Jang Taeguk (7)', 'Pal Jang Taeguk (8)'];
     var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];    
     var counter = 0;
