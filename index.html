@@ -1,1 +1,79 @@
-Hai nama saya lingga
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<style>
+  
+  #number {
+    bottom: 5px;
+    left: 5px;
+    width:50%; /* set to 100% if space is available */
+    height: 270px;
+    z-index:105;
+    text-align:center;
+    font-weight:normal;
+    font-size:28px;
+    color:white;
+    background-color: #5f5f5f;
+    box-shadow:0 0 10px #222;
+    padding:5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 0.7;
+    margin-left: auto;
+    margin-right: auto;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+  }
+  h1, h2, h3, h4 {
+    margin: 20px 0 0 0;
+  }
+
+  h3 {
+    color: coral;
+  }
+</style>
+<body>
+  <div id="number"  style="display: display;">
+    <h2 id="jurus"></h2>
+    <h3 id="gerakan"></h3>
+    <p id="demo"></p>
+  </div>
+  
+  <script>
+
+    
+    
+
+    var myArray = ['Il Jang Taeguk (1)', 'Ee Jang Taeguk (2)', 'Sam Jang Taeguk (3)', 'Sa Jang Taeguk (4)', 'Oh Jang Taeguk (5)', 'Yook Jang Taeguk (6)', 'Chil Jang Taeguk (7)', 'Pal Jang Taeguk (8)'];
+    var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];    
+    var counter = 0;
+    (function loop(i) { 
+      if (i >= 10000) return; // all iterations have been completed
+      var rand = myArray[Math.floor(Math.random() * myArray.length)];
+      var rand2 = number[Math.floor(Math.random() * number.length)];
+      document.getElementById("jurus").innerHTML = rand;
+      document.getElementById("gerakan").innerHTML = "Gerakan Ke - "+rand2;
+    
+      $("#number").fadeIn("slow").delay(11000).fadeOut("slow", loop.bind(null, i+1));
+      var counter = 11;
+      var interval = setInterval(function() {
+          counter--;
+          // Display 'counter' wherever you want to display it.
+          if (counter == 0) {              
+              clearInterval(interval);
+          }
+          document.getElementById("demo").innerHTML =  counter+" detik";
+      }, 1000);
+    })(0); // Execute the loop function immediately with i = 0
+
+  </script>
+
+  
+  
+  
+</body>
+</html>
