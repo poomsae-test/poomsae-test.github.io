@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Poomsae Test</title>
-  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/9/99/Gundam.jpg" type="image/gif" sizes="16x16">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/c/ce/Para_Taekwondo.png" type="image/gif" sizes="16x16">
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <style>
@@ -73,13 +73,13 @@
       document.getElementById("jurus").innerHTML = rand;
       document.getElementById("gerakan").innerHTML = "Gerakan Ke - "+rand2;
     
-      $("#number").fadeIn("slow").delay(15000).fadeOut("slow", loop.bind(null, i+1));
+      $("#number").fadeIn("slow").delay(8000).fadeOut("slow", loop.bind(null, i+1));
       document.getElementById("demo").innerHTML = "Taking a break...";
-      var counter = 13;
+      var counter = 8;
       var interval = setInterval(function() {          
-          if (counter == 13) {
+          if (counter == 8) {
             document.getElementById("demo").innerHTML = "Taking a break...";
-          } else if (counter <= 10) {
+          } else if (counter <= 5) {
             document.getElementById("demo").innerHTML =  counter+" detik";
           }
           // Display 'counter' wherever you want to display it.
